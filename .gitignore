@@ -1,0 +1,3 @@
+*.exe
+git add .gitignore
+git commit -m "Ignore executable files"
