@@ -1,18 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int arr[5];
+int main() {
+    int n;
 
-    cout << "Enter array elements: ";
+    cout << "How many elements you want? ";
+    cin >> n;
 
-    for (int i = 0; i < 5; i++){  
+    cout << "You entered: " << n << endl;
+
+    int arr[n];   
+
+    cout << "Enter " << n << " elements: " << endl;
+
+    for(int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    cout << "Array elements: ";
+    cout << "Array elements are: ";
 
-    for (int i = 0; i < 5; i++){  
+    for(int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
 
