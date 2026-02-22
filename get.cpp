@@ -1,10 +1,19 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main(){
-    cout << "Enter any character: ";
-    char ch = cin.get();
-    cout << "Entered character: '" << ch << "'" << endl;
-    char ch2 = cin.get();
-    cout << "Entered character: '" << ch2 << "'" << endl;
+
+int main()
+{
+    cout << "Enter any char: ";
+    char ch = cin.get();   // First character input
+
+    cout << "Entered char is: '" << ch << "'" << endl;
+
+    cin.get();  // This will clear the newline character
+
+    cout << "Enter another char: ";
+    char ch2 = cin.get();   // Second character input
+
+    cout << "Entered char is: '" << ch2 << "'" << endl;
+
     return 0;
 }
