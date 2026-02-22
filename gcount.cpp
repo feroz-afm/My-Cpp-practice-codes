@@ -1,19 +1,16 @@
 #include <iostream>
 #include <chrono>
 using namespace std;
-using namespace std::chrono;
 
 int main() {
-    auto start = high_resolution_clock::now(); // start time
-    char buffer[100];
-    cout << "Enter text: ";
-    cin.getline(buffer, 100);
-    cout << "Entered Text: " << buffer << endl;
-    cout << "Count of characters: " << cin.gcount() << endl;
+    auto s = chrono::high_resolution_clock::now();   // start
 
-    auto stop = high_resolution_clock::now(); // end time
-    auto duration = duration_cast<milliseconds>(stop - start);
-    cout << "Execution Time: " << duration.count() << " ms" << endl;
+    char buf[100];
+    cout << "Enter text: "; cin.getline(buf, 100);
+    cout << "Text: " << buf << "\nCount: " << cin.gcount() << endl;
 
-    return 0;
+    auto e = chrono::high_resolution_clock::now();   // end
+    cout << "Time: " 
+         << chrono::duration_cast<chrono::seconds>(e - s).count() 
+         << " sec" << endl;
 }
