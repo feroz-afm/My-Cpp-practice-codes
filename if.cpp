@@ -2,7 +2,9 @@
 using namespace std;
 int main ()
 { 
-    int a=5;
+    int a;
+    cout<< " enter a number : "<< endl;
+    cin>> a;
     if (a>3){
         cout<< " a is greater than 3"<< endl;
     }
